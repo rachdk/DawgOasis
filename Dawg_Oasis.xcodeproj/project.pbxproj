@@ -3,10 +3,18 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2D97091B2CA677FC204DA041 /* Pods_Dawg_Oasis.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0CC78A208BA1305CA934F981 /* Pods_Dawg_Oasis.framework */; };
+		89233B932480D2A400EF205B /* NewMessageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89233B922480D2A400EF205B /* NewMessageController.swift */; };
+		89233B952480DBB400EF205B /* UserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89233B942480DBB400EF205B /* UserCell.swift */; };
+		89233B972480F64A00EF205B /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89233B962480F64A00EF205B /* User.swift */; };
+		89233B992480F6B200EF205B /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89233B982480F6B200EF205B /* Service.swift */; };
+		892D80EB248101300074D2B1 /* ChatController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 892D80EA248101300074D2B1 /* ChatController.swift */; };
+		892D80ED2481B3CD0074D2B1 /* CustomInputAccessoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 892D80EC2481B3CD0074D2B1 /* CustomInputAccessoryView.swift */; };
+		892D80EF248205E80074D2B1 /* MessageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 892D80EE248205E80074D2B1 /* MessageCell.swift */; };
 		898919B2247CC3D000DABA4D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 898919B1247CC3D000DABA4D /* AppDelegate.swift */; };
 		898919B4247CC3D000DABA4D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 898919B3247CC3D000DABA4D /* SceneDelegate.swift */; };
 		898919B6247CC3D000DABA4D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 898919B5247CC3D000DABA4D /* ViewController.swift */; };
@@ -14,9 +22,29 @@
 		898919BC247CC3D000DABA4D /* Dawg_Oasis.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 898919BA247CC3D000DABA4D /* Dawg_Oasis.xcdatamodeld */; };
 		898919BE247CC3D300DABA4D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 898919BD247CC3D300DABA4D /* Assets.xcassets */; };
 		898919C1247CC3D300DABA4D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 898919BF247CC3D300DABA4D /* LaunchScreen.storyboard */; };
+		898919C9247CC45200DABA4D /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 898919C8247CC45200DABA4D /* SignUpViewController.swift */; };
+		898919D2247CC8E000DABA4D /* ConversationsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 898919D1247CC8E000DABA4D /* ConversationsController.swift */; };
+		898919D5247CD43400DABA4D /* LogInController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 898919D4247CD43400DABA4D /* LogInController.swift */; };
+		898919D8247CD44B00DABA4D /* RegistrationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 898919D7247CD44B00DABA4D /* RegistrationController.swift */; };
+		898919DA247DDCFB00DABA4D /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 898919D9247DDCFB00DABA4D /* Extensions.swift */; };
+		898919DC247E27AB00DABA4D /* InputContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 898919DB247E27AB00DABA4D /* InputContainerView.swift */; };
+		898919DE247E2DD600DABA4D /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 898919DD247E2DD600DABA4D /* CustomTextField.swift */; };
+		898919E0247E794700DABA4D /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 898919DF247E794700DABA4D /* LoginViewModel.swift */; };
+		898919E5247F1B3A00DABA4D /* RegistrationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 898919E4247F1B3A00DABA4D /* RegistrationViewModel.swift */; };
+		898919E9247F225D00DABA4D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 898919E8247F225D00DABA4D /* GoogleService-Info.plist */; };
+		898919EB248063CB00DABA4D /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 898919EA248063CB00DABA4D /* AuthService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0CC78A208BA1305CA934F981 /* Pods_Dawg_Oasis.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Dawg_Oasis.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		20930F0BD84DE8AF9854B8DF /* Pods-Dawg_Oasis.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Dawg_Oasis.debug.xcconfig"; path = "Target Support Files/Pods-Dawg_Oasis/Pods-Dawg_Oasis.debug.xcconfig"; sourceTree = "<group>"; };
+		89233B922480D2A400EF205B /* NewMessageController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewMessageController.swift; sourceTree = "<group>"; };
+		89233B942480DBB400EF205B /* UserCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCell.swift; sourceTree = "<group>"; };
+		89233B962480F64A00EF205B /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		89233B982480F6B200EF205B /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
+		892D80EA248101300074D2B1 /* ChatController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatController.swift; sourceTree = "<group>"; };
+		892D80EC2481B3CD0074D2B1 /* CustomInputAccessoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomInputAccessoryView.swift; sourceTree = "<group>"; };
+		892D80EE248205E80074D2B1 /* MessageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageCell.swift; sourceTree = "<group>"; };
 		898919AE247CC3D000DABA4D /* Dawg_Oasis.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Dawg_Oasis.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		898919B1247CC3D000DABA4D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		898919B3247CC3D000DABA4D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -26,6 +54,18 @@
 		898919BD247CC3D300DABA4D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		898919C0247CC3D300DABA4D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		898919C2247CC3D300DABA4D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		898919C8247CC45200DABA4D /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		898919D1247CC8E000DABA4D /* ConversationsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversationsController.swift; sourceTree = "<group>"; };
+		898919D4247CD43400DABA4D /* LogInController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInController.swift; sourceTree = "<group>"; };
+		898919D7247CD44B00DABA4D /* RegistrationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationController.swift; sourceTree = "<group>"; };
+		898919D9247DDCFB00DABA4D /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		898919DB247E27AB00DABA4D /* InputContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputContainerView.swift; sourceTree = "<group>"; };
+		898919DD247E2DD600DABA4D /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
+		898919DF247E794700DABA4D /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		898919E4247F1B3A00DABA4D /* RegistrationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewModel.swift; sourceTree = "<group>"; };
+		898919E8247F225D00DABA4D /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
+		898919EA248063CB00DABA4D /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
+		EA25ECE55F754984200B9710 /* Pods-Dawg_Oasis.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Dawg_Oasis.release.xcconfig"; path = "Target Support Files/Pods-Dawg_Oasis/Pods-Dawg_Oasis.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,17 +73,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2D97091B2CA677FC204DA041 /* Pods_Dawg_Oasis.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		830FDF4E00478B1B39BEF041 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0CC78A208BA1305CA934F981 /* Pods_Dawg_Oasis.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		898919A5247CC3D000DABA4D = {
 			isa = PBXGroup;
 			children = (
 				898919B0247CC3D000DABA4D /* Dawg_Oasis */,
 				898919AF247CC3D000DABA4D /* Products */,
+				BE6EFC2B8E98F28422BD86B3 /* Pods */,
+				830FDF4E00478B1B39BEF041 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -58,6 +109,12 @@
 		898919B0247CC3D000DABA4D /* Dawg_Oasis */ = {
 			isa = PBXGroup;
 			children = (
+				898919D0247CC8A300DABA4D /* Model */,
+				898919CF247CC8A200DABA4D /* View */,
+				898919CE247CC8A100DABA4D /* View Model */,
+				898919CD247CC89F00DABA4D /* Controller */,
+				898919CC247CC89E00DABA4D /* API */,
+				898919CA247CC89500DABA4D /* Util */,
 				898919B1247CC3D000DABA4D /* AppDelegate.swift */,
 				898919B3247CC3D000DABA4D /* SceneDelegate.swift */,
 				898919B5247CC3D000DABA4D /* ViewController.swift */,
@@ -66,8 +123,93 @@
 				898919BF247CC3D300DABA4D /* LaunchScreen.storyboard */,
 				898919C2247CC3D300DABA4D /* Info.plist */,
 				898919BA247CC3D000DABA4D /* Dawg_Oasis.xcdatamodeld */,
+				898919C8247CC45200DABA4D /* SignUpViewController.swift */,
+				898919E8247F225D00DABA4D /* GoogleService-Info.plist */,
 			);
 			path = Dawg_Oasis;
+			sourceTree = "<group>";
+		};
+		898919CA247CC89500DABA4D /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				898919D9247DDCFB00DABA4D /* Extensions.swift */,
+			);
+			path = Util;
+			sourceTree = "<group>";
+		};
+		898919CC247CC89E00DABA4D /* API */ = {
+			isa = PBXGroup;
+			children = (
+				898919EA248063CB00DABA4D /* AuthService.swift */,
+				89233B982480F6B200EF205B /* Service.swift */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		898919CD247CC89F00DABA4D /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				898919D3247CD41B00DABA4D /* Authentication */,
+				898919D1247CC8E000DABA4D /* ConversationsController.swift */,
+				89233B922480D2A400EF205B /* NewMessageController.swift */,
+				892D80EA248101300074D2B1 /* ChatController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		898919CE247CC8A100DABA4D /* View Model */ = {
+			isa = PBXGroup;
+			children = (
+				898919E3247F1B2D00DABA4D /* Authentication */,
+			);
+			path = "View Model";
+			sourceTree = "<group>";
+		};
+		898919CF247CC8A200DABA4D /* View */ = {
+			isa = PBXGroup;
+			children = (
+				898919DB247E27AB00DABA4D /* InputContainerView.swift */,
+				898919DD247E2DD600DABA4D /* CustomTextField.swift */,
+				89233B942480DBB400EF205B /* UserCell.swift */,
+				892D80EC2481B3CD0074D2B1 /* CustomInputAccessoryView.swift */,
+				892D80EE248205E80074D2B1 /* MessageCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		898919D0247CC8A300DABA4D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				89233B962480F64A00EF205B /* User.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		898919D3247CD41B00DABA4D /* Authentication */ = {
+			isa = PBXGroup;
+			children = (
+				898919D4247CD43400DABA4D /* LogInController.swift */,
+				898919D7247CD44B00DABA4D /* RegistrationController.swift */,
+			);
+			path = Authentication;
+			sourceTree = "<group>";
+		};
+		898919E3247F1B2D00DABA4D /* Authentication */ = {
+			isa = PBXGroup;
+			children = (
+				898919DF247E794700DABA4D /* LoginViewModel.swift */,
+				898919E4247F1B3A00DABA4D /* RegistrationViewModel.swift */,
+			);
+			path = Authentication;
+			sourceTree = "<group>";
+		};
+		BE6EFC2B8E98F28422BD86B3 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				20930F0BD84DE8AF9854B8DF /* Pods-Dawg_Oasis.debug.xcconfig */,
+				EA25ECE55F754984200B9710 /* Pods-Dawg_Oasis.release.xcconfig */,
+			);
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -77,9 +219,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 898919C5247CC3D300DABA4D /* Build configuration list for PBXNativeTarget "Dawg_Oasis" */;
 			buildPhases = (
+				2CF36992FBF756F9E65E2EE7 /* [CP] Check Pods Manifest.lock */,
 				898919AA247CC3D000DABA4D /* Sources */,
 				898919AB247CC3D000DABA4D /* Frameworks */,
 				898919AC247CC3D000DABA4D /* Resources */,
+				4B5C7DB97A200647A5DD438E /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -129,6 +273,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				898919C1247CC3D300DABA4D /* LaunchScreen.storyboard in Resources */,
+				898919E9247F225D00DABA4D /* GoogleService-Info.plist in Resources */,
 				898919BE247CC3D300DABA4D /* Assets.xcassets in Resources */,
 				898919B9247CC3D000DABA4D /* Main.storyboard in Resources */,
 			);
@@ -136,15 +281,74 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		2CF36992FBF756F9E65E2EE7 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Dawg_Oasis-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4B5C7DB97A200647A5DD438E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Dawg_Oasis/Pods-Dawg_Oasis-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Dawg_Oasis/Pods-Dawg_Oasis-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Dawg_Oasis/Pods-Dawg_Oasis-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		898919AA247CC3D000DABA4D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				898919BC247CC3D000DABA4D /* Dawg_Oasis.xcdatamodeld in Sources */,
+				898919DE247E2DD600DABA4D /* CustomTextField.swift in Sources */,
+				898919DA247DDCFB00DABA4D /* Extensions.swift in Sources */,
 				898919B6247CC3D000DABA4D /* ViewController.swift in Sources */,
+				898919D5247CD43400DABA4D /* LogInController.swift in Sources */,
+				89233B992480F6B200EF205B /* Service.swift in Sources */,
 				898919B2247CC3D000DABA4D /* AppDelegate.swift in Sources */,
 				898919B4247CC3D000DABA4D /* SceneDelegate.swift in Sources */,
+				89233B972480F64A00EF205B /* User.swift in Sources */,
+				898919D2247CC8E000DABA4D /* ConversationsController.swift in Sources */,
+				89233B952480DBB400EF205B /* UserCell.swift in Sources */,
+				898919E0247E794700DABA4D /* LoginViewModel.swift in Sources */,
+				898919E5247F1B3A00DABA4D /* RegistrationViewModel.swift in Sources */,
+				892D80EB248101300074D2B1 /* ChatController.swift in Sources */,
+				898919D8247CD44B00DABA4D /* RegistrationController.swift in Sources */,
+				892D80ED2481B3CD0074D2B1 /* CustomInputAccessoryView.swift in Sources */,
+				89233B932480D2A400EF205B /* NewMessageController.swift in Sources */,
+				898919C9247CC45200DABA4D /* SignUpViewController.swift in Sources */,
+				898919DC247E27AB00DABA4D /* InputContainerView.swift in Sources */,
+				898919EB248063CB00DABA4D /* AuthService.swift in Sources */,
+				892D80EF248205E80074D2B1 /* MessageCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -286,6 +490,7 @@
 		};
 		898919C6247CC3D300DABA4D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 20930F0BD84DE8AF9854B8DF /* Pods-Dawg_Oasis.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -303,6 +508,7 @@
 		};
 		898919C7247CC3D300DABA4D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EA25ECE55F754984200B9710 /* Pods-Dawg_Oasis.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
