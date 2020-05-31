@@ -41,6 +41,7 @@ class LogInController: UIViewController {
         button.backgroundColor = .systemRed
         button.setTitleColor(.black, for: .normal)
         button.setHeight(height: 50)
+        button.addTarget(self, action: #selector(handleLogin), for: .touchUpInside)
         return button
     }()
     

@@ -105,7 +105,9 @@ class RegistrationController: UIViewController {
                 print(error)
                 return
             }
-            self.dismiss(animated: true, completion: nil)
+            else{
+                self.dismiss(animated: true, completion: nil)
+            }
         }
     }
     
