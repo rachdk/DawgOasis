@@ -34,6 +34,7 @@ struct Service {
         }
     }
     
+    
     static func fetchConversations(completion: @escaping([Conversation]) -> Void ) {
         var conversations = [Conversation]()
         guard let uid = Auth.auth().currentUser?.uid else {return}
@@ -88,4 +89,6 @@ struct Service {
             COLLECTION_MESSAGES.document(user.uid).collection("recent-messages").document(currentUid).setData(data)
         }
     }
+    
+    
 }

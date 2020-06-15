@@ -13,6 +13,7 @@ struct RegistrationCredentials {
     let password: String
     let fullname: String
     let username: String
+    let courses: [String]
 }
 
 struct AuthService {

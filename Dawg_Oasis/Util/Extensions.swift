@@ -67,7 +67,7 @@ extension UIView {
     func setDimensions(height: CGFloat, width: CGFloat) {
         translatesAutoresizingMaskIntoConstraints = false
         heightAnchor.constraint(equalToConstant: height).isActive = true
-      //  widthAnchor.constraint(equalTo,@objc Constant: width).isActive = true
+        widthAnchor.constraint(equalToConstant: width).isActive = true
     }
     
     func setHeight(height: CGFloat) {
@@ -79,6 +79,7 @@ extension UIView {
         translatesAutoresizingMaskIntoConstraints = false
         widthAnchor.constraint(equalToConstant: width).isActive = true
     }
+    
 }
 
 extension UIViewController {
@@ -86,7 +87,7 @@ extension UIViewController {
 
     func configureGradientLayer() {
         let gradient = CAGradientLayer()
-        gradient.colors = [UIColor.systemPurple.cgColor, UIColor.systemPink.cgColor]
+        gradient.colors = [UIColor.white, UIColor.systemPurple.cgColor]
         gradient.locations = [0, 1]
         view.layer.addSublayer(gradient)
         gradient.frame = view.frame
@@ -120,7 +121,7 @@ extension UIViewController {
 
         navigationController?.navigationBar.overrideUserInterfaceStyle = .dark
     }
-
+    
     func showError(_ errorMessage: String) {
         let alert = UIAlertController(title: "Error", message: errorMessage, preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "Ok", style: .cancel, handler: nil))

@@ -19,6 +19,7 @@ class CustomTextField: UITextField {
         textColor = .white
         keyboardAppearance = .dark
         attributedPlaceholder = NSAttributedString(string: placeholder, attributes: [.foregroundColor: UIColor.white])
+        autocapitalizationType = .none
         
     }
     

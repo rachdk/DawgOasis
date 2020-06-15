@@ -15,18 +15,27 @@ private let reuseIdentifier = "ConversationCell"
 class ConversationsController: UIViewController {
     //Mark Properties
     
+    //private var user: User
     private let tableView = UITableView()
     private var conversations = [Conversation]()
     
     private let newMessageButton: UIButton = {
         let button = UIButton(type: .system)
         button.setImage(UIImage(systemName: "plus"), for: .normal)
-        button.backgroundColor = .systemPurple
+        button.backgroundColor = #colorLiteral(red: 0.3647058904, green: 0.06666667014, blue: 0.9686274529, alpha: 1)
         button.tintColor = .white
         button.imageView?.setDimensions(height: 24, width: 24)
-        button.addTarget(self, action: #selector(showNewMessage), for: .touchUpInside)
+        button.addTarget(self, action: #selector(updateCourse), for: .touchUpInside)
         return button
     }()
+    
+//    private let courseButton: UIButton = {
+//        let button = UIButton(type: .system)
+//        button.backgroundColor = #colorLiteral(red: 0.9529411793, green: 0.6862745285, blue: 0.1333333403, alpha: 1)
+//        button.tintColor = .black
+//        button.addTarget(self, action: #selector(updateCourse), for: .touchUpInside)
+//        return button
+//    }()
     
     //Mark Lifecycle
     
@@ -41,7 +50,7 @@ class ConversationsController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        configureNavigationBar(withTitle: "Messages", prefersLargeTitles: true)
+        configureNavigationBar(withTitle: "Friends", prefersLargeTitles: true)
     }
     
     //Mark Selector
@@ -58,6 +67,15 @@ class ConversationsController: UIViewController {
         present(nav, animated: true, completion: nil)
     }
     
+    @objc func updateCourse() {
+        
+        let controller = CourseLookupController()
+        controller.delegate = self
+        let nav = UINavigationController(rootViewController: controller)
+        nav.modalPresentationStyle = .fullScreen
+        present(nav,animated: true, completion: nil)
+        
+    }
     
     //Mark - API
     
@@ -108,17 +126,21 @@ class ConversationsController: UIViewController {
         navigationItem.leftBarButtonItem = UIBarButtonItem(image: image, style: .plain, target: self, action: #selector(showProfile))
         
         view.addSubview(newMessageButton)
-        newMessageButton.setDimensions(height: 56, width: 56)
-        newMessageButton.layer.cornerRadius = 56/2
+        newMessageButton.setDimensions(height: 56, width: 70)
+        newMessageButton.layer.cornerRadius = 56 / 2
         newMessageButton.anchor(bottom: view.safeAreaLayoutGuide.bottomAnchor, right:
             view.rightAnchor, paddingBottom: 16, paddingRight: 24)
-        
-        
+//        
+//        view.addSubview(courseButton)
+//        courseButton.anchor(left:
+//            view.leftAnchor, bottom: view.safeAreaLayoutGuide.bottomAnchor, paddingBottom: 16, paddingRight: 24)
+//        
+//        
     }
     
     func configureTableView()
     {
-        tableView.backgroundColor = .systemPink
+        //tableView.backgroundColor = .systemPink
         tableView.rowHeight = 80
         tableView.register(ConversationCell.self, forCellReuseIdentifier: reuseIdentifier)
         tableView.tableFooterView = UIView()
@@ -132,6 +154,12 @@ class ConversationsController: UIViewController {
     func showChatController(forUser user: User)
     {
         let controller = ChatController(user: user)
+        navigationController?.pushViewController(controller, animated: true)
+    }
+    
+    func showCourseLookUp()
+    {
+        let controller = CourseLookupController()
         navigationController?.pushViewController(controller, animated: true)
     }
 }
@@ -163,6 +191,20 @@ extension ConversationsController: NewMessageControllerDelegate {
     func controller(_ controller: NewMessageController, wantsToStartChatWith user: User) {
         controller.dismiss(animated: true, completion: nil)
         showChatController(forUser: user)
-        
     }
+}
+
+extension ConversationsController: CourseLookupControllerDelegate {
+    func controller(_ controller: CourseLookupController, wantsToLookUpCourses user: User) {
+        controller.dismiss(animated: true, completion: nil)
+        showCourseLookUp()
+    }
+}
+
+extension ConversationsController: StudentListControllerDelegate {
+    func controller(_ controller: StudentListController, wantsToSeeList user: User) {
+        controller.dismiss(animated: true, completion: nil)
+        showChatController(forUser: user)
+    }
+    
 }

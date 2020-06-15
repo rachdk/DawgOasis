@@ -13,12 +13,12 @@ class InputContainerView: UIView {
         super.init(frame: .zero)
         
         setHeight(height: 50)
-        
+//
 //        let iv = UIImageView()
 //        iv.image = image
 //        iv.tintColor = .white
 //        iv.alpha = 0.87
-//
+
 //        addSubview(iv)
 //        iv.centerY(inView: self)
 //        iv.anchor( left: leftAnchor, paddingLeft: 8)
@@ -26,7 +26,7 @@ class InputContainerView: UIView {
 //
         addSubview(textField)
         textField.centerY(inView: self)
-        textField.anchor(left:leftAnchor,bottom: bottomAnchor, paddingLeft: 2, paddingBottom: -8)
+     //   textField.anchor(left: leftAnchor, bottom: bottomAnchor, right: rightAnchor, paddingLeft: 8, paddingBottom: -8)
         
         let dividerView = UIView()
         dividerView.backgroundColor = .white

@@ -18,8 +18,11 @@
 		892D80F1248220F20074D2B1 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 892D80F0248220F20074D2B1 /* Message.swift */; };
 		892D80F3248223680074D2B1 /* MessageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 892D80F2248223680074D2B1 /* MessageViewModel.swift */; };
 		8943CA7224831EA70010AF4B /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8943CA7124831EA70010AF4B /* Constants.swift */; };
+		895025502496F85400A68388 /* StudentListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8950254F2496F85400A68388 /* StudentListController.swift */; };
+		89502552249710A400A68388 /* Course.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89502551249710A400A68388 /* Course.swift */; };
 		8977017A248399C3005B3E83 /* ConversationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89770179248399C3005B3E83 /* ConversationCell.swift */; };
 		8977017C24839D3A005B3E83 /* ConversationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8977017B24839D3A005B3E83 /* ConversationViewModel.swift */; };
+		8977017E2485A594005B3E83 /* CourseLookupController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8977017D2485A594005B3E83 /* CourseLookupController.swift */; };
 		898919B2247CC3D000DABA4D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 898919B1247CC3D000DABA4D /* AppDelegate.swift */; };
 		898919B4247CC3D000DABA4D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 898919B3247CC3D000DABA4D /* SceneDelegate.swift */; };
 		898919B6247CC3D000DABA4D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 898919B5247CC3D000DABA4D /* ViewController.swift */; };
@@ -53,8 +56,11 @@
 		892D80F0248220F20074D2B1 /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 		892D80F2248223680074D2B1 /* MessageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageViewModel.swift; sourceTree = "<group>"; };
 		8943CA7124831EA70010AF4B /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		8950254F2496F85400A68388 /* StudentListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentListController.swift; sourceTree = "<group>"; };
+		89502551249710A400A68388 /* Course.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Course.swift; sourceTree = "<group>"; };
 		89770179248399C3005B3E83 /* ConversationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversationCell.swift; sourceTree = "<group>"; };
 		8977017B24839D3A005B3E83 /* ConversationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversationViewModel.swift; sourceTree = "<group>"; };
+		8977017D2485A594005B3E83 /* CourseLookupController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseLookupController.swift; sourceTree = "<group>"; };
 		898919AE247CC3D000DABA4D /* Dawg_Oasis.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Dawg_Oasis.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		898919B1247CC3D000DABA4D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		898919B3247CC3D000DABA4D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -164,6 +170,8 @@
 				898919D1247CC8E000DABA4D /* ConversationsController.swift */,
 				89233B922480D2A400EF205B /* NewMessageController.swift */,
 				892D80EA248101300074D2B1 /* ChatController.swift */,
+				8977017D2485A594005B3E83 /* CourseLookupController.swift */,
+				8950254F2496F85400A68388 /* StudentListController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -196,6 +204,7 @@
 			children = (
 				89233B962480F64A00EF205B /* User.swift */,
 				892D80F0248220F20074D2B1 /* Message.swift */,
+				89502551249710A400A68388 /* Course.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -348,6 +357,7 @@
 				898919DA247DDCFB00DABA4D /* Extensions.swift in Sources */,
 				898919B6247CC3D000DABA4D /* ViewController.swift in Sources */,
 				898919D5247CD43400DABA4D /* LogInController.swift in Sources */,
+				895025502496F85400A68388 /* StudentListController.swift in Sources */,
 				89233B992480F6B200EF205B /* Service.swift in Sources */,
 				898919B2247CC3D000DABA4D /* AppDelegate.swift in Sources */,
 				898919B4247CC3D000DABA4D /* SceneDelegate.swift in Sources */,
@@ -360,12 +370,14 @@
 				892D80EB248101300074D2B1 /* ChatController.swift in Sources */,
 				898919D8247CD44B00DABA4D /* RegistrationController.swift in Sources */,
 				892D80ED2481B3CD0074D2B1 /* CustomInputAccessoryView.swift in Sources */,
+				89502552249710A400A68388 /* Course.swift in Sources */,
 				89233B932480D2A400EF205B /* NewMessageController.swift in Sources */,
 				892D80F1248220F20074D2B1 /* Message.swift in Sources */,
 				898919C9247CC45200DABA4D /* SignUpViewController.swift in Sources */,
 				898919DC247E27AB00DABA4D /* InputContainerView.swift in Sources */,
 				898919EB248063CB00DABA4D /* AuthService.swift in Sources */,
 				892D80EF248205E80074D2B1 /* MessageCell.swift in Sources */,
+				8977017E2485A594005B3E83 /* CourseLookupController.swift in Sources */,
 				892D80F3248223680074D2B1 /* MessageViewModel.swift in Sources */,
 				8943CA7224831EA70010AF4B /* Constants.swift in Sources */,
 				8977017A248399C3005B3E83 /* ConversationCell.swift in Sources */,

@@ -18,9 +18,20 @@ class LogInController: UIViewController {
     
     private let iconImage: UIImageView = {
         let iv = UIImageView()
-        iv.image = UIImage(systemName: "bubble.right")
+        iv.image = UIImage(named: "hand")
+        iv.image = iv.image?.withRenderingMode(.alwaysTemplate)
         iv.tintColor = .white
         return iv
+    }()
+    
+    private let logo: UILabel = {
+        let label = UILabel(frame: CGRect(x: 0,y: 0,width: 200,height: 21))
+        label.text = "Dawg Oasis"
+      //  label.center = CGPointMake(160, 284)
+        label.font = UIFont(name:"HelveticaNeue-Bold", size: 20.0)
+        label.textColor = .white
+        label.textAlignment = NSTextAlignment.center
+        return label
     }()
     
     private lazy var emailContainerView: UIView = {
@@ -38,7 +49,7 @@ class LogInController: UIViewController {
         button.setTitle("Log In", for: .normal)
         button.layer.cornerRadius = 5
         button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 16)
-        button.backgroundColor = .systemRed
+        button.backgroundColor = .systemPink
         button.setTitleColor(.black, for: .normal)
         button.setHeight(height: 50)
         button.addTarget(self, action: #selector(handleLogin), for: .touchUpInside)
@@ -46,7 +57,10 @@ class LogInController: UIViewController {
     }()
     
     
-    private let emailTextField = CustomTextField(placeholder: "Email")
+    private let emailTextField :CustomTextField = {
+        let tf = CustomTextField(placeholder: "email")
+        return tf
+    }()
     
     
     private let passwordTextField: CustomTextField = {
@@ -98,6 +112,7 @@ class LogInController: UIViewController {
         AuthService.shared.logUserIn(withEmail: email, password: password) {result, error in
             if let error = error {
                 print(error)
+                self.showLoader(false)
                 return
             }
             
@@ -119,7 +134,7 @@ class LogInController: UIViewController {
     func checkFormStatus() {
         if viewModel.formIsValid {
             loginButton.isEnabled = true
-            loginButton.backgroundColor = #colorLiteral(red: 0.8078431487, green: 0.02745098062, blue: 0.3333333433, alpha: 1)
+            loginButton.backgroundColor = #colorLiteral(red: 0.8313342929, green: 0.4848033786, blue: 0.9723425508, alpha: 1)
         } else {
             loginButton.isEnabled = false
             loginButton.backgroundColor = #colorLiteral(red: 0.9098039269, green: 0.4784313738, blue: 0.6431372762, alpha: 1)
@@ -134,19 +149,23 @@ class LogInController: UIViewController {
         
         view.addSubview(iconImage)
         iconImage.centerX(inView: view)
-        iconImage.anchor(top: view.safeAreaLayoutGuide.topAnchor, paddingTop: 32)
-        iconImage.setDimensions(height: 120, width: 120)
+        iconImage.anchor(top: view.safeAreaLayoutGuide.topAnchor, paddingTop: 100)
+        iconImage.setDimensions(height: 110, width: 110)
+        
+        view.addSubview(logo)
+        logo.anchor(top: iconImage.bottomAnchor, left: view.leftAnchor, right: view.rightAnchor, paddingTop: 20)
         
         let stack = UIStackView(arrangedSubviews: [emailContainerView,
                                                    passwordContainerView,
                                                    loginButton,
                                                    RegisterButton])
+       // stack.anchor(paddingTop: 40)
         
         stack.axis = .vertical
         stack.spacing = 16
         
         view.addSubview(stack)
-        stack.anchor(top: iconImage.bottomAnchor, left: view.leftAnchor, right: view.rightAnchor, paddingTop: 32, paddingLeft: 32, paddingRight: 32)
+        stack.anchor( top: logo.bottomAnchor, left: view.leftAnchor, right: view.rightAnchor, paddingTop: 32, paddingLeft: 32, paddingRight: 32)
         
         emailTextField.addTarget(self, action: #selector(textDidChange), for: .editingChanged)
         passwordTextField.addTarget(self, action: #selector(textDidChange), for: .editingChanged)
